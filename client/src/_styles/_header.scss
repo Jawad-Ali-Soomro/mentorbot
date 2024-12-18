@@ -1,0 +1,34 @@
+.header-container {
+    position: fixed;
+    width: calc(100% - 200px);
+    padding: 50px;
+    top: 0;
+    justify-content: space-between;
+    .logo {
+        img {
+            width: 80px;
+        }
+    }
+    .menu {
+
+        gap: 5px;
+        cursor: pointer;
+        .bar {
+            width: 50px;
+            height: 3px;
+            transition: .3s;
+            background: black;
+        }
+        .bar:last-child {
+            width: 30px;
+        }
+        .bar:first-child {
+            width: 30px;
+        }
+    }
+    .menu:hover {
+        .bar {
+            width: 50px !important;
+        }
+    }
+}
