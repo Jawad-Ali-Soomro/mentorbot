@@ -162,3 +162,41 @@
         }   
     }
 }
+
+.subscription {
+    .cards {
+        .card {
+            transition: .3s;
+            position: relative;
+            height: 650px;
+            button {
+                width: 80% ;
+                position: absolute;
+                bottom: 20px;
+            }
+            h2 {
+                position: absolute;
+                top: 50px;
+                sup{
+                    font-weight: 500;
+                }
+            }
+            ul {
+                position: absolute;
+                top: 120px;
+                left: 10%;
+                li {
+                    max-width: 90%;
+                    text-align: justify;
+                    list-style: none;
+                }
+            }
+        }
+        .card:nth-child(2) {
+            margin-bottom: 100px;
+        }
+        .card:hover {
+            transform: translateY(-100px);
+        }
+    }
+}
