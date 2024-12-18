@@ -104,3 +104,61 @@
         }
     }
 }
+
+.why-choose-us {
+    width: calc(100% - 200px);
+    min-height: 100vh;
+    h1 {
+        font-weight: 900;
+        font-size: 5rem;
+    }
+    p{
+        max-width: 1000px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .cards {
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        justify-content: space-between;
+        .card {
+            width: calc(100% / 3.02);
+            height: 350px;
+            border-radius: 20px;
+            background: white;
+            gap: 10px;
+            p {
+                max-width: 80%;
+                text-align: center;
+            }
+            h2 {
+                text-transform: capitalize;
+                font-weight: 900;
+            }
+            button {
+                width: 200px;
+                padding-left: 30px;
+                padding-right: 10px;
+                height: 60px;
+                justify-content: space-between;
+                border-radius: 30px;
+                border: none;
+                margin-top: 20px;
+                .icon {
+                    width: 45px;
+                    height: 45px;
+                    background: white;
+                    border-radius: 25px;
+                    border: 1px solid #80808090;
+                }
+            }
+        }
+        .card:nth-child(2) {
+            background: rgba(65, 105, 225, 0.3);
+        }
+        .card:nth-child(1) {
+            background: rgba(255, 166, 0, 0.3);
+        }   
+    }
+}
