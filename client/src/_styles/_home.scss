@@ -3,7 +3,6 @@
     width: calc(100% - 100px);
     padding-left: 50px;
     padding-right: 50px;
-
     .left-intro {
         align-items: start;
 
@@ -23,7 +22,7 @@
         border: 1px solid #80808090;
         padding: 10px;
         border-radius: 50px;
-
+        z-index: -1;
         p {
             text-align: justify;
             font-size: .8rem;
