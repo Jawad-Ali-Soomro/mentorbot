@@ -1,12 +1,12 @@
 import React from 'react'
 import '../_styles/_header.scss'
 import { useState } from 'react'
-import { BiCode, BiEdit, BiEditAlt, BiHome, BiLogoFacebook, BiLogoGithub, BiLogoInstagram, BiLogoTwitter, BiPencil, BiSolidDashboard, BiUser } from 'react-icons/bi'
-import { GrDashboard } from 'react-icons/gr'
+import { BiHome, BiLogIn, BiLogoFacebook, BiLogoGithub, BiLogoInstagram, BiLogoTwitter, BiUser } from 'react-icons/bi'
+import { IoHomeOutline } from 'react-icons/io5'
 import { MdDashboard } from 'react-icons/md'
-import { TbDashboard } from 'react-icons/tb'
-import { CgProfile } from 'react-icons/cg'
 import { RiDashboardLine } from 'react-icons/ri'
+import { CgArrowLongRight, CgCode } from 'react-icons/cg'
+import { FcStart } from 'react-icons/fc'
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(true)
@@ -20,27 +20,34 @@ const Header = () => {
         <div className="bar" style={{ opacity: `${showMenu ? "0" : ""}` }}></div>
         <div className="bar" style={{ transform: `${showMenu ? 'rotate(-45deg)' : ""}`, position: `${showMenu ? "absolute" : ""}` }}></div>
       </div>
-      <div className="main-menu flex col" style={{ transform: `${showMenu ? "translateY(0%)" : "translateY(-150%)"}` }}>
-        <div className="top-menu flex">
-          <div className="navs flex col">
-            <div className="nav flex">
-              <BiHome />
-            </div>
-            <div className="nav flex">
-              <RiDashboardLine />
-            </div>
-            <div className="nav flex">
-              <BiCode />
-            </div>
-            <div className="nav flex">
-              <BiPencil />
-            </div>
-            <div className="nav flex">
-              <BiUser />
-            </div>
+      <div className="main-menu flex col" style={{ transform: `${showMenu ? "translateY(0%)" : "translateY(-100%)"}` }}>
+        <div className="top-menu flex" style={{ transform: `${showMenu ? "translateX(0)" : "translateX(-100%)"}` }}>
+          <ul className="flex col">
+            <li className='flex'>Home <span><IoHomeOutline /></span></li>
+            <li className='flex'>Dashboard <span><RiDashboardLine /></span></li>
+            <li className='flex'>Code <span><CgCode /></span></li>
+            <li className='flex'>Profile <span><BiUser /></span></li>
+            <li className='flex line'>Get Started <span><CgArrowLongRight /></span></li>
+          </ul>
+         
         </div>
+        <div className="bottom-menu flex col" style={{ transform: `${showMenu ? "translateX(0%)" : "translateX(100%)"}` }}>
+        
+          <div className="links flex">
+            <div className="link flex">
+              <BiLogoFacebook />
+            </div>
+            <div className="link flex">
+              <BiLogoTwitter />
+            </div>
+            <div className="link flex">
+              <BiLogoInstagram />
+            </div>
+            <div className="link flex">
+              <BiLogoGithub />
+            </div>
+          </div>
         </div>
-       
       </div>
     </div>
   )
